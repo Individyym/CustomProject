@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .plate{
+            background: indianred;
+        }
+        #root-body {
+            overflow: hidden;
+        }
+        .plate{
+        }
+        img{
+            height: 100vh;
+        }
+        /* Scroll Thumb Styles */
+        .scrollbar-track {
+            position: absolute;
+            opacity: 0;
+            z-index: 1;
+            -webkit-transition: opacity .5s ease-out, background .5s ease-out;
+            transition: opacity .5s ease-out, background .5s ease-out;
+            background: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        .scrollbar-track-y {
+            top: 0;
+            right: 0;
+            width: 6px;
+            height: 100%;
+        }
+        .scrollbar-thumb {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 10vh!important;
+            background: #000000;
+            transition: transform .3s linear, background .9s, opacity .3s;
+        }
+        .active-scroll-thumb {
+            opacity: 1!important;
+        }
+    </style>
+</head>
+<body id="root-body">
+
+    <div class="plate" id="root-container">
+        <img src="./images/telegram.svg" alt="">
+        <img src="./images/telegram.svg" alt="">
+        <img src="./images/telegram.svg" alt="">
+        <img src="./images/telegram.svg" alt="">
+    </div>
+    <!-- Scroll -->
+    
+    <aside class="scrollbar-track scrollbar-track-y active-scroll-thumb" style="display: block;">
+            <div class="scrollbar-thumb scrollbar-thumb-y" style="height: 97.4px;"></div>
+    </aside>
+
+    <script src="scroll.js"></script>
+</body>
+</html>
